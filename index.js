@@ -3,7 +3,7 @@ const app = express();
 const swaggerJSDoc = require('swagger-jsdoc');
 const swaggerUI = require('swagger-ui-express');
 const { right_of_access, right_of_erase } = require('./backend.request')
-
+const PORT = process.env.PORT || 8000;
 
 const swaggerOptions = {
     definition: {
@@ -110,6 +110,6 @@ app.post("/roa_request", right_of_access);
  */
 app.post("/roe_request", right_of_erase);
 
-app.listen(2500, () => {
-    console.log("server listening in port 2500");
+app.listen(PORT, () => {
+    console.log("server listening in port PORT");
 })
