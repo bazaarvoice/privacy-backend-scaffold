@@ -3,7 +3,7 @@ const app = express();
 const swaggerJSDoc = require('swagger-jsdoc');
 const swaggerUI = require('swagger-ui-express');
 const { right_of_access, right_of_erase } = require('./backend.request')
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8080;
 
 const swaggerOptions = {
     definition: {
